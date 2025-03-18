@@ -5,10 +5,10 @@ Autonomous exploration drone developed based on Fast_LIO and Ego-Planner algorit
 [MID360](https://www.livoxtech.com/cn/mid-360)<br>
 Ubuntu20.04.6
 # Guidance for reference
-_PX4_
+_PX4_:
 https://docs.px4.io/main/en/<br>
-https://docs.px4.io/main/en/ros/mavros_installation.html
-_ROS_
+https://docs.px4.io/main/en/ros/mavros_installation.html<br>
+_ROS_:
 https://wiki.ros.org/ROS<br>
 https://wiki.ros.org/ROS/Installation<br>
 https://wiki.ros.org/noetic/Installation/Ubuntu
