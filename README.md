@@ -21,19 +21,23 @@ https://github.com/hku-mars/FAST_LIO<br>
 https://github.com/Livox-SDK/livox_ros_driver2<br>
 
 ```
+sudo dpkg -i .deb
+sudo apt install .deb
+sudo apt -f install
+```
+
+```
 ifconfig #Check the basic configuration information of the network card, including the name of the network card
 sudo lshw -class network #View the local network card information
 lspci -v #View the network card information of the PCI device
 sudo vi /etc/network/interfaces #Open the network card configuration file to view
 ```
-```Bash
-sudo dpkg -i .deb
-sudo apt install .deb
-sudo apt -f install
-tar -zxvf XXX.tar.gz
-```
+Download the offline compilation and installation from the following link：
 [linux-firmware](https://web.git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/)<br>
 [backport-iwlwifi](https://web.git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git/)<br>
+```
+tar -zxvf XXX.tar.gz
+```
 ```
 sudo apt update
 sudo apt-get upgrade
@@ -70,4 +74,13 @@ wget -c https://raw.githubusercontent.com/qboticslabs/ros_install_noetic/master/
 The following line of command will uninstall ROS Noetic Ninjemys
 ```
 wget -c https://raw.githubusercontent.com/qboticslabs/ros_install_noetic/master/ros_uninstall_noetic.sh && chmod +x ./ros_uninstall_noetic.sh && ./ros_uninstall_noetic.sh
+```
+# Livox-SDK2
+Instruction for Ubuntu 20.04
+Dependencies:
+* [CMake 3.0.0+](https://cmake.org/)
+* gcc 4.8.1+
+Install the **CMake** using apt:
+```shell
+$ sudo apt install cmake
 ```
