@@ -3,7 +3,7 @@ Autonomous exploration drone developed based on Fast_LIO and Ego-Planner algorit
 # Bill of Materials（BOM）
 [NUC13VYKi5](https://www.asus.com.cn/displays-desktops/nucs/nuc-kits/nuc-13-pro-desk-edition-kit/techspec/)<br>
 [MID360](https://www.livoxtech.com/cn/mid-360)<br>
-Ubuntu20.04.6
+[Ubuntu20.04.6](https://releases.ubuntu.com/focal/)
 # Guidance for reference
 _PX4_:<br>
 https://docs.px4.io/main/en/<br>
@@ -32,8 +32,8 @@ sudo apt install .deb
 sudo apt -f install
 tar -zxvf XXX.tar.gz
 ```
-[linux-firmware](https://web.git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/)
-[backport-iwlwifi](https://web.git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git/)
+[linux-firmware](https://web.git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/)<br>
+[backport-iwlwifi](https://web.git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git/)<br>
 ```
 sudo apt update
 sudo apt-get upgrade
