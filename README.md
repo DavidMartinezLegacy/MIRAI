@@ -2,7 +2,10 @@
 Autonomous exploration drone developed based on Fast_LIO and Ego-Planner algorithms
 # Bill of Materials（BOM）
 [NUC13VYKi5](https://www.asus.com.cn/displays-desktops/nucs/nuc-kits/nuc-13-pro-desk-edition-kit/techspec/)<br>
-[MID360](https://www.livoxtech.com/cn/mid-360)
+[MID360](https://www.livoxtech.com/cn/mid-360)<br>
+# Guidance for reference
+PX4  
+https://docs.px4.io/main/en/<br>
 https://docs.px4.io/main/en/ros/mavros_installation.html
 
 # ROS One-line Installation
