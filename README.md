@@ -25,12 +25,13 @@ https://github.com/ZJU-FAST-Lab/ego-planner<br>
 https://github.com/hku-mars/FAST_LIO<br>
 https://github.com/Livox-SDK/livox_ros_driver2<br>
 
+Common software installation commands
 ```shell
 sudo dpkg -i .deb
 sudo apt install .deb
 sudo apt -f install
 ```
-
+Network status and network hardware information query
 ```
 ifconfig #Check the basic configuration information of the network card, including the name of the network card
 sudo lshw -class network #View the local network card information
