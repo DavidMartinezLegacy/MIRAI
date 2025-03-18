@@ -25,13 +25,13 @@ https://github.com/ZJU-FAST-Lab/ego-planner<br>
 https://github.com/hku-mars/FAST_LIO<br>
 https://github.com/Livox-SDK/livox_ros_driver2<br>
 
-Common software installation commands
+Common software installation commands：
 ```shell
 sudo dpkg -i .deb
 sudo apt install .deb
 sudo apt -f install
 ```
-Network status and network hardware information query
+Network status and network hardware information query：
 ```
 ifconfig #Check the basic configuration information of the network card, including the name of the network card
 sudo lshw -class network #View the local network card information
@@ -44,6 +44,7 @@ Download the offline compilation and installation from the following link：<br>
 ```
 tar -zxvf XXX.tar.gz
 ```
+Solve network card driver problems online：
 ```shell
 sudo apt update
 sudo apt-get upgrade
@@ -57,7 +58,6 @@ cd linux-firmware
 sudo cp iwlwifi-* /lib/firmware/
 cd ..
 ```
-
 ```
 git clone -b release/core76 https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
 cd backport-iwlwifi
