@@ -26,7 +26,7 @@ sudo lshw -class network #View the local network card information
 lspci -v #View the network card information of the PCI device
 sudo vi /etc/network/interfaces #Open the network card configuration file to view
 ```
-```bash
+```Bash
 sudo dpkg -i .deb
 sudo apt install .deb
 sudo apt -f install
