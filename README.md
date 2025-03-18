@@ -7,6 +7,7 @@ Autonomous exploration drone developed based on Fast_LIO and Ego-Planner algorit
 AP-H743V2
 * Software<br>
 [Ubuntu20.04.6](https://releases.ubuntu.com/focal/)<br>
+[MavROS](https://wiki.ros.org/mavros)<br>
 [ROS_noetic](https://wiki.ros.org/noetic)<br>
 [Nuttx](https://nuttx.apache.org/)<br>
 # Guidance for reference
