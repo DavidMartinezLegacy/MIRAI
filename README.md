@@ -32,7 +32,7 @@ sudo lshw -class network #View the local network card information
 lspci -v #View the network card information of the PCI device
 sudo vi /etc/network/interfaces #Open the network card configuration file to view
 ```
-Download the offline compilation and installation from the following link：
+Download the offline compilation and installation from the following link：<br>
 [linux-firmware](https://web.git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/)<br>
 [backport-iwlwifi](https://web.git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git/)<br>
 ```
