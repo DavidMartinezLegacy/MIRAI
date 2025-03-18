@@ -6,7 +6,8 @@ Autonomous exploration drone developed based on Fast_LIO and Ego-Planner algorit
 [MID360](https://www.livoxtech.com/cn/mid-360)<br>
 * Software<br>
 [Ubuntu20.04.6](https://releases.ubuntu.com/focal/)<br>
-[ROS_noetic](https://wiki.ros.org/noetic)
+[ROS_noetic](https://wiki.ros.org/noetic)<br>
+[Nuttx](https://nuttx.apache.org/)<br>
 # Guidance for reference
 _PX4_:<br>
 https://docs.px4.io/main/en/<br>
