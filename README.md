@@ -27,6 +27,14 @@ lspci -v #View the network card information of the PCI device
 sudo vi /etc/network/interfaces #Open the network card configuration file to view
 ```
 ```
+sudo dpkg -i .deb
+sudo apt install .deb
+sudo apt -f install
+tar -zxvf XXX.tar.gz
+```
+[linux-firmware](https://web.git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/)
+[backport-iwlwifi](https://web.git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git/)
+```
 sudo apt update
 sudo apt-get upgrade
 sudo apt-get install -y git
@@ -39,6 +47,7 @@ cd linux-firmware
 sudo cp iwlwifi-* /lib/firmware/
 cd ..
 ```
+
 ```
 git clone -b release/core76 https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
 cd backport-iwlwifi
