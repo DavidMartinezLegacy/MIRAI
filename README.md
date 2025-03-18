@@ -20,10 +20,10 @@ https://github.com/ZJU-FAST-Lab/ego-planner<br>
 https://github.com/hku-mars/FAST_LIO<br>
 https://github.com/Livox-SDK/livox_ros_driver2<br>
 
-```
-sudo dpkg -i .deb
-sudo apt install .deb
-sudo apt -f install
+```shell
+$sudo dpkg -i .deb
+$sudo apt install .deb
+$sudo apt -f install
 ```
 
 ```
@@ -84,3 +84,24 @@ Install the **CMake** using apt:
 ```shell
 $ sudo apt install cmake
 ```
+Compile and install the Livox-SDK2:
+
+```shell
+$ git clone https://github.com/Livox-SDK/Livox-SDK2.git
+$ cd ./Livox-SDK2/
+$ mkdir build
+$ cd build
+$ cmake .. && make -j
+$ sudo make install
+```
+
+**Note :**  
+The generated shared library and static library are installed to the directory of "/usr/local/lib". The header files are installed to the directory of "/usr/local/include".
+
+Tips: Remove Livox SDK2:
+
+```shell
+$ sudo rm -rf /usr/local/lib/liblivox_lidar_sdk_*
+$ sudo rm -rf /usr/local/include/livox_lidar_*
+```
+
