@@ -11,8 +11,11 @@ https://docs.px4.io/main/en/ros/mavros_installation.html<br>
 _ROS_:<br>
 https://wiki.ros.org/ROS<br>
 https://wiki.ros.org/ROS/Installation<br>
-https://wiki.ros.org/noetic/Installation/Ubuntu
-
+https://wiki.ros.org/noetic/Installation/Ubuntu<br>
+_MavROS_<br>
+https://wiki.ros.org/mavros<br>
+_QGC(QGroundControl)_<br>
+https://qgroundcontrol.com/<br>
 
 
 # ROS One-line Installation
