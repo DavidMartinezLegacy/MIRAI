@@ -21,9 +21,9 @@ https://github.com/hku-mars/FAST_LIO<br>
 https://github.com/Livox-SDK/livox_ros_driver2<br>
 
 ```shell
-$sudo dpkg -i .deb
-$sudo apt install .deb
-$sudo apt -f install
+sudo dpkg -i .deb
+sudo apt install .deb
+sudo apt -f install
 ```
 
 ```
@@ -38,7 +38,7 @@ Download the offline compilation and installation from the following link：<br>
 ```
 tar -zxvf XXX.tar.gz
 ```
-```
+```shell
 sudo apt update
 sudo apt-get upgrade
 sudo apt-get install -y git
