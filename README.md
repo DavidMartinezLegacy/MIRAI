@@ -16,6 +16,8 @@ _MavROS_<br>
 https://wiki.ros.org/mavros<br>
 _QGC(QGroundControl)_<br>
 https://qgroundcontrol.com/<br>
+https://github.com/ZJU-FAST-Lab/ego-planner<br>
+https://github.com/hku-mars/FAST_LIO<br>
 
 
 # ROS One-line Installation
