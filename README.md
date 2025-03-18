@@ -1,9 +1,12 @@
 # MIRAI
 Autonomous exploration drone developed based on Fast_LIO and Ego-Planner algorithms
 # Bill of Materials（BOM）
+*Hardware
 [NUC13VYKi5](https://www.asus.com.cn/displays-desktops/nucs/nuc-kits/nuc-13-pro-desk-edition-kit/techspec/)<br>
 [MID360](https://www.livoxtech.com/cn/mid-360)<br>
-[Ubuntu20.04.6](https://releases.ubuntu.com/focal/)
+*Software
+[Ubuntu20.04.6](https://releases.ubuntu.com/focal/)<br>
+[ROS_noetic](https://wiki.ros.org/noetic)
 # Guidance for reference
 _PX4_:<br>
 https://docs.px4.io/main/en/<br>
@@ -75,13 +78,12 @@ The following line of command will uninstall ROS Noetic Ninjemys
 ```
 wget -c https://raw.githubusercontent.com/qboticslabs/ros_install_noetic/master/ros_uninstall_noetic.sh && chmod +x ./ros_uninstall_noetic.sh && ./ros_uninstall_noetic.sh
 ```
-测试程式
+Test Program
 ```shell
 roscore #Open rosmaster
 rosrun turtlesim turtlesim_node #Open the little turtle visualization interface
 rosrun turtlesim turtle_teleop_key #Open the turtle keyboard control node
-
-
+rqt_graph
 ```
 # Livox-SDK2
 Instruction for Ubuntu 20.04
@@ -161,7 +163,7 @@ Terminal startup
 ```
 roslaunch livox_ros_driver2 msg_MID360.launch
 ```
-New terminal
+New terminal（Ctrl+Alt+T）
 ```
 roslaunch fast_lio mapping_mid360.launch
 ```
