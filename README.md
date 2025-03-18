@@ -1,10 +1,10 @@
 # MIRAI
 Autonomous exploration drone developed based on Fast_LIO and Ego-Planner algorithms
 # Bill of Materials（BOM）
-*Hardware
+* Hardware<br>
 [NUC13VYKi5](https://www.asus.com.cn/displays-desktops/nucs/nuc-kits/nuc-13-pro-desk-edition-kit/techspec/)<br>
 [MID360](https://www.livoxtech.com/cn/mid-360)<br>
-*Software
+* Software<br>
 [Ubuntu20.04.6](https://releases.ubuntu.com/focal/)<br>
 [ROS_noetic](https://wiki.ros.org/noetic)
 # Guidance for reference
