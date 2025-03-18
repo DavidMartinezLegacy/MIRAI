@@ -10,15 +10,15 @@ AP-H743V2
 [ROS_noetic](https://wiki.ros.org/noetic)<br>
 [Nuttx](https://nuttx.apache.org/)<br>
 # Guidance for reference
-_PX4_:<br>
-https://docs.px4.io/main/en/<br>
-https://docs.px4.io/main/en/ros/mavros_installation.html<br>
 _ROS_:<br>
 https://wiki.ros.org/ROS<br>
 https://wiki.ros.org/ROS/Installation<br>
 https://wiki.ros.org/noetic/Installation/Ubuntu<br>
 _MavROS_<br>
 https://wiki.ros.org/mavros<br>
+_PX4_:<br>
+https://docs.px4.io/main/en/<br>
+https://docs.px4.io/main/en/ros/mavros_installation.html<br>
 _QGC(QGroundControl)_<br>
 https://qgroundcontrol.com/<br>
 https://github.com/ZJU-FAST-Lab/ego-planner<br>
