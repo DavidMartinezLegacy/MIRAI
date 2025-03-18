@@ -18,7 +18,19 @@ _QGC(QGroundControl)_<br>
 https://qgroundcontrol.com/<br>
 https://github.com/ZJU-FAST-Lab/ego-planner<br>
 https://github.com/hku-mars/FAST_LIO<br>
+https://github.com/Livox-SDK/livox_ros_driver2<br>
 
+```
+ifconfig #Check the basic configuration information of the network card, including the name of the network card
+sudo lshw -class network #View the local network card information
+lspci -v #View the network card information of the PCI device
+sudo vi /etc/network/interfaces #Open the network card configuration file to view
+
+```
+```
+```
+```
+```
 
 # ROS One-line Installation
 Single-line installation The following line of command will install the latest ROS Noetic Ninjemys on Ubuntu Focal 20.04. Copy & Paste this line of command into the Ubuntu terminal.
