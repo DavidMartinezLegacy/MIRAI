@@ -3,10 +3,17 @@ Autonomous exploration drone developed based on Fast_LIO and Ego-Planner algorit
 # Bill of Materials（BOM）
 [NUC13VYKi5](https://www.asus.com.cn/displays-desktops/nucs/nuc-kits/nuc-13-pro-desk-edition-kit/techspec/)<br>
 [MID360](https://www.livoxtech.com/cn/mid-360)<br>
+Ubuntu20.04.6
 # Guidance for reference
-PX4  
+_PX4_
 https://docs.px4.io/main/en/<br>
 https://docs.px4.io/main/en/ros/mavros_installation.html
+_ROS_
+https://wiki.ros.org/ROS<br>
+https://wiki.ros.org/ROS/Installation<br>
+https://wiki.ros.org/noetic/Installation/Ubuntu
+
+
 
 # ROS One-line Installation
 Single-line installation The following line of command will install the latest ROS Noetic Ninjemys on Ubuntu Focal 20.04. Copy & Paste this line of command into the Ubuntu terminal.
