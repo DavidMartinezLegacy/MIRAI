@@ -25,11 +25,29 @@ ifconfig #Check the basic configuration information of the network card, includi
 sudo lshw -class network #View the local network card information
 lspci -v #View the network card information of the PCI device
 sudo vi /etc/network/interfaces #Open the network card configuration file to view
-
 ```
 ```
+sudo apt update
+sudo apt-get upgrade
+sudo apt-get install -y git
+sudo apt-get install -y build-essential
+sudo apt-get install make
+sudo apt install flex bison
+#Download linux-firmware
+git clone git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git
+cd linux-firmware
+sudo cp iwlwifi-* /lib/firmware/
+cd ..
 ```
 ```
+git clone -b release/core76 https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
+cd backport-iwlwifi
+sudo make defconfig-iwlwifi-public
+sudo make -j4
+sudo make install
+```
+```
+reboot
 ```
 
 # ROS One-line Installation
