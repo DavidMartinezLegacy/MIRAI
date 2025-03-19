@@ -147,7 +147,7 @@ fast_lio/src/livox_ros_driver2/config/MID360_config.json
   },
   "lidar_configs" : [
     {
-      "ip" : "192.168.1.123",		  	     # <-Here is the IP address of Livox mid360
+      "ip" : "192.168.1.123",		  	    # <-Here is the IP address of Livox mid360
       "pcl_data_type" : 1,
       "pattern_mode" : 0,
       "extrinsic_parameter" : {
