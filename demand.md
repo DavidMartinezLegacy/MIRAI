@@ -5,7 +5,7 @@
 - CP2102、RS232、CH343等串口模块
 # 当前项目进展：<br>
 * 可以通过搭载在UAV平台上完成自主建图并保存输出
-* 可以通过雷达及SLAM算法输出的ODOM及LidarCloud数据完成自主航线规划
+* 可以通过雷达及SLAM算法输出的Odom及LidarCloud数据完成自主航线规划
 # 开发问题：<br>
 - USB接口在Ubuntu物理机不能正常完成Mavlink链接问题/<br>
 _尝试配置COM口或使用TTL转USB芯片模块通过串口连接_<br>
