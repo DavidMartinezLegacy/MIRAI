@@ -28,6 +28,8 @@ https://github.com/Livox-SDK/livox_ros_driver2<br>
 
 Common software installation commands：
 ```shell
+sudo apt-get update && upgrade
+sudo apt-get install build-essential
 sudo dpkg -i .deb
 sudo apt install .deb
 sudo apt -f install
