@@ -82,7 +82,7 @@ sudo make install
 ```
 reboot
 ```
-_TL-XDN7000_
+_TL-XDN7000_：
 [Driver.deb](https://resource.tp-link.com.cn/pc/docCenter/showDoc?id=1711936501082156)<BR>
 Check Command：<br>
 ```shell
