@@ -69,7 +69,16 @@ sudo make install
 ```
 reboot
 ```
-
+_TL-XDN7000_
+Check Command：<br>
+```shell
+dpkg -s build-essential
+```
+Installation Commands：<br>
+```shell
+sudo apt-get update
+sudo apt-get install build-essential
+```
 # ROS One-line Installation
 Single-line installation The following line of command will install the latest ROS Noetic Ninjemys on Ubuntu Focal 20.04. Copy & Paste this line of command into the Ubuntu terminal.
 TwoLineInstall
