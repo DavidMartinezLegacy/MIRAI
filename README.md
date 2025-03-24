@@ -69,12 +69,13 @@ sudo make install
 ```
 reboot
 ```
-_TL-XDN7000_
-Check Command：<br>
+_TL-XDN7000_<br>
+
+· Check Command：<br>
 ```shell
 dpkg -s build-essential
 ```
-Installation Commands：<br>
+· Installation Commands：<br>
 ```shell
 sudo apt-get update
 sudo apt-get install build-essential
