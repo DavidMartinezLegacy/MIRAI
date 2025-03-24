@@ -55,6 +55,7 @@ Download the offline compilation and installation from the following link：<br>
 tar -zxvf XXX.tar.gz
 ```
 Solve network card driver problems online：
+* Install linux-firmware
 ```shell
 sudo apt update
 sudo apt-get upgrade
@@ -68,6 +69,7 @@ cd linux-firmware
 sudo cp iwlwifi-* /lib/firmware/
 cd ..
 ```
+* Install iwlwifi
 ```shell
 git clone -b release/core76 https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
 cd backport-iwlwifi
@@ -75,6 +77,7 @@ sudo make defconfig-iwlwifi-public
 sudo make -j4
 sudo make install
 ```
+* Log out and log in
 ```
 reboot
 ```
