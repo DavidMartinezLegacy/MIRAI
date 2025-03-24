@@ -26,6 +26,13 @@ https://github.com/ZJU-FAST-Lab/ego-planner<br>
 https://github.com/hku-mars/FAST_LIO<br>
 https://github.com/Livox-SDK/livox_ros_driver2<br>
 
+[工具网站](http://www.ip33.com/)
+```shell
+sudo apt install nscd
+sudo gedit /ect/hosts
+/etc/init.d/nscd restart
+```
+
 Common software installation commands：
 ```shell
 sudo apt-get update && upgrade
@@ -35,7 +42,7 @@ sudo apt install .deb
 sudo apt -f install
 ```
 Network status and network hardware information query：
-```
+```shell
 ifconfig #Check the basic configuration information of the network card, including the name of the network card
 sudo lshw -class network #View the local network card information
 lspci -v #View the network card information of the PCI device
