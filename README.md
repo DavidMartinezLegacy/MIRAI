@@ -25,7 +25,8 @@ https://qgroundcontrol.com/<br>
 https://github.com/ZJU-FAST-Lab/ego-planner<br>
 https://github.com/hku-mars/FAST_LIO<br>
 https://github.com/Livox-SDK/livox_ros_driver2<br>
-# Modify hosts to access Github
+# Solutions to some common network problems
+Modify hosts to access Github
 [Tool website](http://www.ip33.com/)
 ```shell
 sudo apt install nscd
