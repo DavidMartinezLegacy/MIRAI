@@ -59,7 +59,7 @@ cd linux-firmware
 sudo cp iwlwifi-* /lib/firmware/
 cd ..
 ```
-```
+```shell
 git clone -b release/core76 https://git.kernel.org/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi.git
 cd backport-iwlwifi
 sudo make defconfig-iwlwifi-public
@@ -71,11 +71,11 @@ reboot
 ```
 _TL-XDN7000_<br>
 
-· Check Command：<br>
+Check Command：<br>
 ```shell
 dpkg -s build-essential
 ```
-· Installation Commands：<br>
+Installation Commands：<br>
 ```shell
 sudo apt-get update
 sudo apt-get install build-essential
