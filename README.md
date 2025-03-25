@@ -83,7 +83,7 @@ sudo make install
 reboot
 ```
 _TL-XDN7000_：
-[Driver.deb](https://resource.tp-link.com.cn/pc/docCenter/showDoc?id=1711936501082156)<BR>
+[Driver.deb](https://resource.tp-link.com.cn/pc/docCenter/showDoc?id=1711936501082156)<br>
 Check Command：<br>
 ```shell
 dpkg -s build-essential
