@@ -27,7 +27,7 @@ https://github.com/hku-mars/FAST_LIO<br>
 https://github.com/Livox-SDK/livox_ros_driver2<br>
 # Solutions to some common network problems
 Modify hosts to access Github
-<code>[IP_Tool] (http://www.ip33.com/)</code>
+[IP_Tool] (http://www.ip33.com/)
 ```shell
 sudo apt install nscd
 sudo gedit /ect/hosts
