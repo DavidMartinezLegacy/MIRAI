@@ -210,7 +210,7 @@ roslaunch ego_planner simple_run.launch
 If your network to github is slow, We recommend you to try the gitee repository [https://gitee.com/iszhouxin/ego-planner](https://gitee.com/iszhouxin/ego-planner). They synchronize automatically.
 ```cpp
     ros::Time last_request = ros::Time::now();
-    */Loop request to enter offboard and unlock armed/*
+    /*Loop request to enter offboard and unlock armed*/
     while(ros::ok())
     {
         if( current_state.mode != "OFFBOARD" && (ros::Time::now() - last_request > ros::Duration(5.0)))
