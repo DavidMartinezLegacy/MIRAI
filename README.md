@@ -209,6 +209,48 @@ roslaunch ego_planner simple_run.launch
 ```
 If your network to github is slow, We recommend you to try the gitee repository [https://gitee.com/iszhouxin/ego-planner](https://gitee.com/iszhouxin/ego-planner). They synchronize automatically.
 ```cpp
+ros::Time last_request = ros::Time::now();
+ while(ros::ok())
+    {
+        if( current_state.mode != "OFFBOARD" && (ros::Time::now() - last_request > ros::Duration(5.0)))
+        {
+            if( set_mode_client.call(offb_set_mode) && offb_set_mode.response.mode_sent)
+            {
+                ROS_INFO("Offboard enabled");
+            }
+           	last_request = ros::Time::now();
+           	flag_init_position = false;		    
+       	}
+        else 
+		{
+			if( !current_state.armed && (ros::Time::now() - last_request > ros::Duration(5.0)))
+			{
+		        if( arming_client.call(arm_cmd) && arm_cmd.response.success)
+		       	{
+		            ROS_INFO("Vehicle armed");
+		        }
+		        last_request = ros::Time::now();
+		        flag_init_position = false;		    
+			}
+		}
+	    
+	    //Added altitude judgment to make the drone jump out of the mode switching cycle
+	    if(fabs(local_pos.pose.pose.position.z- init_position_z_take_off -ALTITUDE)<0.1)
+		{	
+			if(ros::Time::now() - last_request > ros::Duration(3.0))
+			{
+				mission_num = 1;
+				break;
+			}
+		}
+		//Added time judgment to make the drone jump out of the mode switching cycle
+		if(ros::Time::now() - last_request > ros::Duration(10.0))
+		{
+			mission_num = 1;
+			break;
+		}
+```
+```cpp
 #include <ros/ros.h>
 #include "PX4CtrlFSM.h"
 #include <signal.h>
