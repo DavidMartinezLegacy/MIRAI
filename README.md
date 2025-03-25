@@ -210,7 +210,8 @@ roslaunch ego_planner simple_run.launch
 If your network to github is slow, We recommend you to try the gitee repository [https://gitee.com/iszhouxin/ego-planner](https://gitee.com/iszhouxin/ego-planner). They synchronize automatically.
 ```cpp
 ros::Time last_request = ros::Time::now();
- while(ros::ok())
+    //Loop request to enter offboard and unlock armed
+    while(ros::ok())
     {
         if( current_state.mode != "OFFBOARD" && (ros::Time::now() - last_request > ros::Duration(5.0)))
         {
@@ -221,7 +222,7 @@ ros::Time last_request = ros::Time::now();
            	last_request = ros::Time::now();
            	flag_init_position = false;		    
        	}
-        else 
+          else 
 		{
 			if( !current_state.armed && (ros::Time::now() - last_request > ros::Duration(5.0)))
 			{
@@ -243,8 +244,8 @@ ros::Time last_request = ros::Time::now();
 				break;
 			}
 		}
-		//Added time judgment to make the drone jump out of the mode switching cycle
-		if(ros::Time::now() - last_request > ros::Duration(10.0))
+            //Added time judgment to make the drone jump out of the mode switching cycle
+            if(ros::Time::now() - last_request > ros::Duration(10.0))
 		{
 			mission_num = 1;
 			break;
