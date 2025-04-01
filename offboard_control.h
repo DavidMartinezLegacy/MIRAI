@@ -18,9 +18,8 @@ using namespace Eigen;
 
 class OffboardControl {
  public:
-    /**
-     *默认构造函数
-     */
+
+
   OffboardControl(void):
   offboard_nh_("~") 
 {
@@ -52,7 +51,7 @@ class OffboardControl {
 
 };
 
-//机体坐标系下发送yz速度期望值以及期望偏航角速度至飞控，用于二维码跟踪 （参考于：）,在ros机体坐标系下pos_setpoint.velocity.y+飞机向前飞，pos_setpoint.velocity.x+飞机向右飞
+//Send the expected yz velocity and the expected yaw rate to the flight controller in the body coordinate system for QR code tracking (reference:), in the ros body coordinate system, pos_setpoint.velocity.y+the aircraft flies forward, pos_setpoint.velocity.x+the aircraft flies right
 void OffboardControl::send_body_velyz_setpoint(const Eigen::Vector3d& vel_sp, float yaw_sp)
 {
     mavros_msgs::PositionTarget pos_setpoint;
@@ -69,7 +68,7 @@ void OffboardControl::send_body_velyz_setpoint(const Eigen::Vector3d& vel_sp, fl
     pos_setpoint.yaw_rate = yaw_sp;
     mavros_setpoint_pos_pub_.publish(pos_setpoint);
 }
-//机体坐标系下发送xyz速度期望值以及期望偏航角速度至飞控 （参考于：https://docs.px4.io/master/en/flight_modes/offboard.html）
+//Send the expected xyz velocity and the expected yaw rate to the flight controller in the body coordinate system (reference: https://docs.px4.io/master/en/flight_modes/offboard.html)
 void OffboardControl::send_body_velxyz_setpoint(const Eigen::Vector3d& vel_sp, float yaw_sp)
 {
     mavros_msgs::PositionTarget pos_setpoint;
@@ -85,7 +84,7 @@ void OffboardControl::send_body_velxyz_setpoint(const Eigen::Vector3d& vel_sp, f
     pos_setpoint.yaw_rate = yaw_sp;
     mavros_setpoint_pos_pub_.publish(pos_setpoint);
 }
-//local frame本地坐标系下发送xyz速度期望值以及期望偏航角速度至飞控
+//Send the expected xyz velocity and the expected yaw rate to the flight controller in the local frame
 void OffboardControl::send_velxyz_setpoint(const Eigen::Vector3d& vel_sp, float yaw_sp)
 {
     mavros_msgs::PositionTarget pos_setpoint;
@@ -101,7 +100,7 @@ void OffboardControl::send_velxyz_setpoint(const Eigen::Vector3d& vel_sp, float 
     pos_setpoint.yaw_rate = yaw_sp;
     mavros_setpoint_pos_pub_.publish(pos_setpoint);
 }
-//机体坐标系下发送xy速度期望值以及高度z期望值和期望偏航角速度至飞控
+//Send the expected xy speed, z altitude and yaw rate to the flight controller in the body coordinate system
 void OffboardControl::send_body_velxy_posz_yaw_setpoint(const Eigen::Vector3d& vel_sp, float desire_z, float yaw_sp)
 {
     mavros_msgs::PositionTarget pos_setpoint;
@@ -117,7 +116,7 @@ void OffboardControl::send_body_velxy_posz_yaw_setpoint(const Eigen::Vector3d& v
     pos_setpoint.yaw_rate = yaw_sp;
     mavros_setpoint_pos_pub_.publish(pos_setpoint);
 }
-//机体坐标系下发送xy速度期望值以及高度z期望值至飞控（输入：期望xy,期望高度）
+//Send the expected xy speed and z height to the flight controller in the body coordinate system (input: expected xy, expected height)
 void OffboardControl::send_body_velxy_posz_setpoint(const Eigen::Vector3d& vel_sp, float desire_z)
 {
     mavros_msgs::PositionTarget pos_setpoint;
@@ -133,7 +132,7 @@ void OffboardControl::send_body_velxy_posz_setpoint(const Eigen::Vector3d& vel_s
 
     mavros_setpoint_pos_pub_.publish(pos_setpoint);
 }
-//本地坐标系发送xy速度期望值以及高度z期望值至飞控（输入：期望xy,期望高度）
+//The local coordinate system sends the expected xy speed and the expected height z value to the flight controller (input: expected xy, expected height)
 void OffboardControl::send_velxy_posz_setpoint(const Eigen::Vector3d& vel_sp, float desire_z)
 {
     mavros_msgs::PositionTarget pos_setpoint;
@@ -149,7 +148,7 @@ void OffboardControl::send_velxy_posz_setpoint(const Eigen::Vector3d& vel_sp, fl
 
     mavros_setpoint_pos_pub_.publish(pos_setpoint);
 }
-//发送位置期望值至飞控（输入：期望xyz,期望yaw）
+//Send the expected position value to the flight controller (input: expected xyz, expected yaw)
 void OffboardControl::send_pos_setpoint(const Eigen::Vector3d& pos_sp, float yaw_sp)
 {
     mavros_msgs::PositionTarget pos_setpoint;
@@ -166,7 +165,7 @@ void OffboardControl::send_pos_setpoint(const Eigen::Vector3d& pos_sp, float yaw
     mavros_setpoint_pos_pub_.publish(pos_setpoint);
 }
 
-//通过/mavros/setpoint_position/local这个topic发布位置控制至飞控
+//Publish position control to the flight controller through the topic /mavros/setpoint_position/local
 void OffboardControl::send_local_pos_setpoint(const Eigen::Vector3d& pos_sp)
 {
     geometry_msgs::PoseStamped pos_target;
@@ -178,7 +177,7 @@ void OffboardControl::send_local_pos_setpoint(const Eigen::Vector3d& pos_sp)
 
 
 
-//发送底层至飞控（输入：MxMyMz,期望推力）
+//Send the bottom layer to the flight controller (input: Mx、My、Mz, expected thrust)
 void OffboardControl::send_actuator_setpoint(const Eigen::Vector4d& actuator_sp)
 {
     mavros_msgs::ActuatorControl actuator_setpoint;
@@ -196,14 +195,14 @@ void OffboardControl::send_actuator_setpoint(const Eigen::Vector4d& actuator_sp)
     actuator_setpoint_pub_.publish(actuator_setpoint);
 }
 
-//发送角度期望值至飞控（输入：期望角度-欧拉角,期望推力）(期望的是角度值 NED坐标系，而不是弧度值)
+//Send the expected angle value to the flight controller (input: expected angle - Euler angle, expected thrust) (the expected value is the angle value NED coordinate system, not the radian value)
 void OffboardControl::send_attitude_setpoint(const Eigen::Vector3d& _AttitudeReference,float thrust_sp)
 {
     mavros_msgs::AttitudeTarget att_setpoint;
     Eigen::Vector3d temp_att;
     tf2::Quaternion quat_obj;
 
-    /*角度值转成弧度值*/
+    /*Convert angle value to radian value*/
     temp_att[0] = _AttitudeReference[0]/(180/pi);
     temp_att[1] = _AttitudeReference[1]/(180/pi);
     temp_att[2] =(90- _AttitudeReference[2])/(180/pi);
@@ -211,7 +210,7 @@ void OffboardControl::send_attitude_setpoint(const Eigen::Vector3d& _AttitudeRef
     {
     	temp_att[2] = 2*pi+temp_att[2];
     }
-    /*欧拉角转四元数*/
+    /*Euler angle to quaternion*/
     quat_obj.setRPY( temp_att[0], temp_att[1], temp_att[2]);
     //Mappings: If any of these bits are set, the corresponding input should be ignored:
     //bit 1: body roll rate, bit 2: body pitch rate, bit 3: body yaw rate. bit 4-bit 6: reserved, bit 7: throttle, bit 8: attitude
@@ -228,7 +227,7 @@ void OffboardControl::send_attitude_setpoint(const Eigen::Vector3d& _AttitudeRef
 
 }
 
-//发送角速度期望值至飞控（输入：期望角速度,期望推力）
+//Send the expected angular velocity to the flight controller (input: expected angular velocity, expected thrust)
 void OffboardControl::send_attitude_rate_setpoint(const Eigen::Vector3d& attitude_rate_sp, float thrust_sp)
 {
     mavros_msgs::AttitudeTarget att_setpoint;
