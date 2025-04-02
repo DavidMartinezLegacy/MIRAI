@@ -251,7 +251,7 @@ void OffboardControl::send_mount_control_command(const Eigen::Vector3d& mount_sp
   mavros_msgs::MountControl mount_setpoint;
   mount_setpoint.mode = 2;
   mount_setpoint.pitch = mount_sp[0]; // Gimbal Pitch
-  mount_setpoint.roll = mount_sp[1]; // Gimbal  Yaw
+  mount_setpoint.roll = mount_sp[1]; // Gimbal  Roll
   mount_setpoint.yaw = mount_sp[2]; // Gimbal  Yaw
 
   mount_control_pub_.publish(mount_setpoint);
